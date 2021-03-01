@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 public class DemoEmit {
     @Autowired
     ApplicationContext applicationContext;
-
     public void emit(String msg) {
         applicationContext.publishEvent(new DemoEvent(this, msg));
     }
